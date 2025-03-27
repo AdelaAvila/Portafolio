@@ -33,19 +33,23 @@ header {
     justify-content: flex-start;
     text-align: left;
     padding: 20px 40px;
+    flex-wrap: wrap;
 }
 
+/* Logo */
 .logo img {
-    max-width: 200px; /* Imagen más grande */
+    max-width: 200px; 
     height: auto;
     display: block;
-    margin-right: 20px; /* Espacio entre la imagen y el texto */
+    margin-right: 20px; 
 }
 
+/* Contenedor del texto */
 .header-text {
     flex: 1;
 }
 
+/* Estilos del texto */
 h1 {
     font-size: 2.5rem;
     margin: 5px 0;
@@ -55,6 +59,35 @@ h2 {
     font-size: 1.5rem;
     font-weight: normal;
 }
+
+/* Media Query para hacer responsivo en móviles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .logo img {
+        max-width: 150px; /* Reduce el tamaño del logo en móviles */
+        margin-right: 0;
+        margin-bottom: 10px; /* Espacio entre el logo y el texto */
+    }
+
+    .header-text {
+        flex: none;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+}
+
 
 /* Sección Sobre mí */
 .sobre-mi {
@@ -140,13 +173,13 @@ h2 {
 .logo-seccion img:hover {
     transform: scale(1.1);
 }
-
 /* Paleta de colores */
 .paleta-colores .colores {
     display: flex;
     justify-content: center;
     gap: 10px;
     margin-top: 10px;
+    flex-wrap: wrap; /* Permite que los cuadros se acomoden en varias líneas si es necesario */
 }
 
 .paleta-colores .color {
@@ -167,6 +200,21 @@ h2 {
 /* Texto blanco en el cuadro negro */
 .paleta-colores .color[style*="background-color: #000000"] {
     color: var(--blanco);
+}
+
+/* Media Query para hacer responsivo en móviles */
+@media (max-width: 768px) {
+    .paleta-colores .colores {
+        flex-direction: column; /* Acomoda los colores en una columna */
+        align-items: center; /* Centra los cuadros en la pantalla */
+    }
+
+    .paleta-colores .color {
+        width: 90%; /* Hace que los cuadros ocupen casi todo el ancho en móviles */
+        max-width: 200px; /* Máximo ancho para que no se vean demasiado grandes */
+        height: auto;
+        padding: 20px; /* Más espacio interno para que el texto se vea bien */
+    }
 }
 
 /* Tipografía */
