@@ -38,7 +38,7 @@ header {
 
 /* Logo */
 .logo img {
-    max-width: 200px; 
+    max-width: 250px; 
     height: auto;
     display: block;
     margin-right: 20px; 
@@ -69,7 +69,7 @@ h2 {
     }
 
     .logo img {
-        max-width: 150px; /* Reduce el tamaño del logo en móviles */
+        max-width: 250px; /* Reduce el tamaño del logo en móviles */
         margin-right: 0;
         margin-bottom: 10px; /* Espacio entre el logo y el texto */
     }
