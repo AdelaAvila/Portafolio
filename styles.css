@@ -98,3 +98,81 @@ h2 {
     text-align: justify;
 }
 
+/* Sección Identidad Visual con fondo morado */
+.identidad-visual {
+    background-color: var(--morado);
+    color: var(--blanco);
+    padding: 50px 20px;
+    text-align: center;
+    margin: 40px auto;
+    border-radius: 15px;
+    max-width: 900px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos generales para los apartados */
+.identidad-visual h3 {
+    font-size: 1.8rem;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.identidad-visual p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 10px auto 20px;
+    line-height: 1.5;
+}
+
+/* Logotipo con fondo blanco */
+.logo-seccion img {
+    max-width: 150px;
+    margin: 10px;
+    background-color: var(--blanco); /* Fondo blanco */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover en logotipo */
+.logo-seccion img:hover {
+    transform: scale(1.1);
+}
+
+/* Paleta de colores */
+.paleta-colores .colores {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.paleta-colores .color {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-align: center;
+    flex-direction: column;
+    padding: 10px;
+    border: 2px solid var(--negro); /* Borde negro */
+}
+
+/* Texto blanco en el cuadro negro */
+.paleta-colores .color[style*="background-color: #000000"] {
+    color: var(--blanco);
+}
+
+/* Tipografía */
+.tipografia .fuente-ejemplo {
+    font-family: 'Celtic Garamond', serif;
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
