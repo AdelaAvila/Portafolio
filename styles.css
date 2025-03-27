@@ -176,3 +176,540 @@ h2 {
     margin: 10px 0;
 }
 
+/* Sección Tono de la Marca */
+.tono-marca {
+    background-color: var(--negro);
+    color: var(--blanco);
+    padding: 50px 20px;
+    text-align: center;
+    margin: 40px auto;
+    border-radius: 15px;
+    max-width: 900px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tono-marca h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--morado);
+}
+
+.tono-marca p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    line-height: 1.5;
+}
+
+/* Diseño de las tarjetas */
+.tarjetas-tono {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.tarjeta {
+    background-color: var(--morado);
+    color: var(--blanco);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 250px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.tarjeta h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.tarjeta p {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+/* Sección Normativas */
+.normativas {
+    background-color: var(--blanco);
+    color: var(--negro);
+    padding: 50px 20px;
+    text-align: center;
+    margin: 40px auto;
+    border-radius: 15px;
+    max-width: 900px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.normativas h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--morado);
+}
+
+.normativas p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    line-height: 1.5;
+}
+
+/* Estilo para la lista de normativas */
+.lista-normativas {
+    list-style-type: none;
+    padding: 0;
+}
+
+.lista-normativas li {
+    font-size: 1.1rem;
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+.lista-normativas li strong {
+    font-weight: bold;
+    color: var(--morado);
+}
+
+/* Sección Mi Inspiración */
+.mi-inspiracion {
+    background-color: var(--blanco);
+    color: var(--negro);
+    padding: 50px 20px;
+    text-align: center;
+    margin: 40px auto;
+    border-radius: 15px;
+    max-width: 900px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.mi-inspiracion h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--morado);
+}
+
+.mi-inspiracion p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    line-height: 1.5;
+}
+
+.mi-inspiracion .inspiracion-gif {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Sección Redes Sociales */
+.contacto {
+    background-color: var(--morado);
+    color: var(--blanco);
+    padding: 50px 20px;
+    text-align: center;
+    margin: 40px auto;
+    border-radius: 15px;
+    max-width: 900px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contacto h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.contacto p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    line-height: 1.5;
+}
+
+/* Estilo para las redes sociales */
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.redes-sociales a img {
+    width: 50px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.redes-sociales a img:hover {
+    transform: scale(1.2);
+}
+
+/* Burbujas flotantes */
+@keyframes burbujas {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    100% {
+        transform: translateY(-100vh) translateX(100vw);
+    }
+}
+
+.burbujas {
+    position: fixed; /* Cambiado a fixed para que las burbujas se muevan por todo el fondo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Aseguramos que ocupe toda la pantalla */
+    pointer-events: none;
+    z-index: -1; /* Las burbujas estarán por detrás del contenido */
+    overflow: hidden;
+}
+
+.burbujas .burbuja {
+    position: absolute;
+    border-radius: 50%;
+    animation: burbujas 20s infinite ease-in-out;
+    opacity: 0.5;
+}
+
+/* Colores de las burbujas (morado, negro, blanco) */
+.burbujas .burbuja:nth-child(1) {
+    width: 100px;
+    height: 100px;
+    background-color: #A389D8; /* Morado */
+    animation-duration: 8s;
+    animation-delay: 0s;
+    top: 90%;
+    left: 10%;
+}
+
+.burbujas .burbuja:nth-child(2) {
+    width: 120px;
+    height: 120px;
+    background-color: #000000; /* Negro */
+    animation-duration: 10s;
+    animation-delay: 2s;
+    top: 80%;
+    left: 40%;
+}
+
+.burbujas .burbuja:nth-child(3) {
+    width: 90px;
+    height: 90px;
+    background-color: #FFFFFF; /* Blanco */
+    animation-duration: 12s;
+    animation-delay: 4s;
+    top: 70%;
+    left: 60%;
+}
+
+.burbujas .burbuja:nth-child(4) {
+    width: 150px;
+    height: 150px;
+    background-color: #A389D8;
+    animation-duration: 15s;
+    animation-delay: 6s;
+    top: 60%;
+    left: 80%;
+}
+
+.burbujas .burbuja:nth-child(5) {
+    width: 130px;
+    height: 130px;
+    background-color: #000000;
+    animation-duration: 20s;
+    animation-delay: 8s;
+    top: 50%;
+    left: 20%;
+}
+
+.burbujas .burbuja:nth-child(6) {
+    width: 70px;
+    height: 70px;
+    background-color: #FFFFFF;
+    animation-duration: 18s;
+    animation-delay: 3s;
+    top: 40%;
+    left: 30%;
+}
+
+.burbujas .burbuja:nth-child(7) {
+    width: 80px;
+    height: 80px;
+    background-color: #A389D8;
+    animation-duration: 16s;
+    animation-delay: 1s;
+    top: 30%;
+    left: 50%;
+}
+
+.burbujas .burbuja:nth-child(8) {
+    width: 120px;
+    height: 120px;
+    background-color: #000000;
+    animation-duration: 14s;
+    animation-delay: 7s;
+    top: 20%;
+    left: 70%;
+}
+
+.burbujas .burbuja:nth-child(9) {
+    width: 100px;
+    height: 100px;
+    background-color: #FFFFFF;
+    animation-duration: 13s;
+    animation-delay: 10s;
+    top: 10%;
+    left: 90%;
+}
+
+.burbujas .burbuja:nth-child(10) {
+    width: 110px;
+    height: 110px;
+    background-color: #A389D8;
+    animation-duration: 9s;
+    animation-delay: 2s;
+    top: 25%;
+    left: 40%;
+}
+
+.burbujas .burbuja:nth-child(11) {
+    width: 140px;
+    height: 140px;
+    background-color: #000000;
+    animation-duration: 12s;
+    animation-delay: 5s;
+    top: 30%;
+    left: 15%;
+}
+
+.burbujas .burbuja:nth-child(12) {
+    width: 60px;
+    height: 60px;
+    background-color: #FFFFFF;
+    animation-duration: 8s;
+    animation-delay: 3s;
+    top: 45%;
+    left: 65%;
+}
+
+.burbujas .burbuja:nth-child(13) {
+    width: 90px;
+    height: 90px;
+    background-color: #A389D8;
+    animation-duration: 7s;
+    animation-delay: 9s;
+    top: 50%;
+    left: 55%;
+}
+
+.burbujas .burbuja:nth-child(14) {
+    width: 130px;
+    height: 130px;
+    background-color: #000000;
+    animation-duration: 18s;
+    animation-delay: 11s;
+    top: 40%;
+    left: 75%;
+}
+
+.burbujas .burbuja:nth-child(15) {
+    width: 75px;
+    height: 75px;
+    background-color: #FFFFFF;
+    animation-duration: 10s;
+    animation-delay: 4s;
+    top: 60%;
+    left: 10%;
+}
+
+.burbujas .burbuja:nth-child(16) {
+    width: 150px;
+    height: 150px;
+    background-color: #A389D8;
+    animation-duration: 22s;
+    animation-delay: 6s;
+    top: 80%;
+    left: 25%;
+}
+
+.burbujas .burbuja:nth-child(17) {
+    width: 110px;
+    height: 110px;
+    background-color: #000000;
+    animation-duration: 16s;
+    animation-delay: 3s;
+    top: 70%;
+    left: 85%;
+}
+
+/* Burbujas blancas con borde negro */
+.burbujas .burbuja:nth-child(3),
+.burbujas .burbuja:nth-child(6),
+.burbujas .burbuja:nth-child(9),
+.burbujas .burbuja:nth-child(12),
+.burbujas .burbuja:nth-child(15) {
+    border: 2px solid #000000; /* Borde negro */
+}
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+
+body {
+  background: #e2b29f;
+  font-size: 120%;
+}
+
+.rabbit {
+  width: 5em;
+  height: 3em;
+  background: #ffffff;
+  border-radius: 70% 90% 60% 50%;
+  position: relative;
+  box-shadow: -0.2em 1em 0 -0.75em #b78e81;
+  transform: rotate(0deg) translate(-2em, 0);
+  animation: hop 1s infinite linear;
+  z-index: 1;
+}
+
+/* Cola, ojo y patas */
+.rabbit::before {
+  content: "";
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  background: white;
+  border-radius: 100%;
+  top: 0.5em;
+  left: -0.3em;
+  box-shadow:
+    4em 0.4em 0 -0.35em #3f3334, /* ojo */
+    0.5em 1em 0 white, /* pata trasera */
+    4em 1em 0 -0.3em white, /* pata delantera */
+    4em 1em 0 -0.3em white,
+    4em 1em 0 -0.4em white;
+  animation: kick 1s infinite linear;
+}
+
+/* Orejas */
+.rabbit::after {
+  content: "";
+  position: absolute;
+  width: 0.75em;
+  height: 2em;
+  background: white;
+  border-radius: 50% 100% 0 0;
+  transform: rotate(-30deg);
+  right: 1em;
+  top: -1em;
+  border-top: 1px solid #f7f5f4;
+  border-left: 1px solid #f7f5f4;
+  box-shadow: -0.5em 0em 0 -0.1em white;
+}
+
+/* Nube */
+.clouds {
+  background: white;
+  width: 2em;
+  height: 2em;
+  border-radius: 100% 100% 0 0;
+  position: relative;
+  top: -5em;
+  opacity: 0;
+  transform: translate(0, 0);
+  animation: cloudy 1s infinite linear forwards;
+  box-shadow: 5em 2em 0 -0.3em white, -2em 2em 0 0 white;
+}
+
+.clouds::before,
+.clouds::after {
+  content: '';
+  position: absolute;
+  box-shadow: 5em 2em 0 -0.3em white, -2em 2em 0 white;
+}
+
+.clouds::before {
+  width: 1.25em;
+  height: 1.25em;
+  border-radius: 100% 100% 0 100%;
+  background: white;
+  left: -30%;
+  bottom: 0;
+}
+
+.clouds::after {
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 100% 100% 100% 0;
+  background: white;
+  right: -30%;
+  bottom: 0;
+}
+
+/* Animaciones */
+@keyframes hop {
+  20% {
+    transform: rotate(-10deg) translate(1em, -2em);
+    box-shadow: -0.2em 3em 0 -1em #b78e81;
+  }
+  40% {
+    transform: rotate(10deg) translate(3em, -4em);
+    box-shadow: -0.2em 3.25em 0 -1.1em #b78e81;
+  }
+  60%, 75% {
+    transform: rotate(0) translate(4em, 0);
+    box-shadow: -0.2em 1em 0 -0.75em #b78e81;
+  }
+}
+
+@keyframes kick {
+  20%, 50% {
+    box-shadow:
+      4em 0.4em 0 -0.35em #3f3334,
+      0.5em 1.5em 0 white,
+      4em 1.75em 0 -0.3em white,
+      4em 1.75em 0 -0.3em white,
+      4em 1.9em 0 -0.4em white;
+  }
+  40% {
+    box-shadow:
+      4em 0.4em 0 -0.35em #3f3334,
+      0.5em 2em 0 white,
+      4em 1.75em 0 -0.3em white,
+      4.2em 1.75em 0 -0.2em white,
+      4.4em 1.9em 0 -0.2em white;
+  }
+}
+
+@keyframes cloudy {
+  40% {
+    opacity: 0.75;
+    transform: translate(-3em, 0);
+  }
+  55% {
+    opacity: 0;
+    transform: translate(-4em, 0);
+  }
+  90% {
+    transform: translate(0, 0);
+  }
+}
+
