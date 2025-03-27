@@ -1,0 +1,100 @@
+/* Importar la fuente Celtic Garamond */
+@import url('https://fonts.googleapis.com/css2?family=Celtic+Garamond&display=swap');
+
+:root {
+    --blanco: #FFFFFF;  /* Pureza, claridad y equilibrio */
+    --negro: #000000;  /* Elegancia, misterio y sofisticación */
+    --morado: #A389D8; /* Espiritualidad, magia y misterio */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Celtic Garamond', serif;
+    background-color: var(--blanco);
+    color: var(--negro);
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: var(--morado);
+    color: var(--blanco);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 20px 40px;
+}
+
+.logo img {
+    max-width: 200px; /* Imagen más grande */
+    height: auto;
+    display: block;
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+}
+
+.header-text {
+    flex: 1;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 5px 0;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+/* Sección Sobre mí */
+.sobre-mi {
+    background-color: var(--morado);
+    color: var(--blanco);
+    padding: 50px 20px;
+    text-align: center;
+    margin: 40px auto;
+    border-radius: 15px;
+    max-width: 800px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor de imagen y texto */
+.sobre-mi .contenido {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.sobre-mi img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover en la imagen */
+.sobre-mi img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.sobre-mi p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 600px;
+    text-align: justify;
+}
+
