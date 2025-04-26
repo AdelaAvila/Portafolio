@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venus Renait - Adela Ávila Franco</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Recursos/conejo.png" type="image/png">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- PDF.js para visualización de PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+    <style>
+        .pdf-container {
+            width: 100%;
+            height: 500px;
+            overflow: auto;
+            margin: 20px 0;
+            border: 1px solid #A389D8;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .pdf-viewer {
+            width: 100%;
+            height: 100%;
+        }
+        .pdf-controls {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        .pdf-controls button {
+            background: #A389D8;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .pdf-controls button:hover {
+            background: #8a6fd1;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <div class="rabbit"></div>
+            </div>
+            <div class="navbar-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar-menu">
+                <li class="navbar-item">
+                    <a href="index.html" class="navbar-link">Perfil</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="trabajo.html" class="navbar-link">Mi Trabajo</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="evento.html" class="navbar-link active">Organización de Eventos</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="tienda.html" class="navbar-link">Tienda Online</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="evento-header">
+        <div class="logo">
+            <img src="Recursos/logo.png" alt="Logotipo de Adela Ávila Franco">
+        </div>
+        <div class="header-text">
+            <h1>Organización de Eventos</h1>
+            <h2>Experiencias únicas y memorables</h2>
+        </div>
+    </header>
+
+    <!-- Selector de eventos -->
+    <section class="selector-eventos">
+        <div class="contenedor">
+            <h2>Selecciona un Evento</h2>
+            <div class="eventos-grid">
+                <div class="evento-card" onclick="mostrarEvento('venus')">
+                    <img src="Recursos/" alt="Venus Renait">
+                    <h3>Venus Renait</h3>
+                    <p>Pasarela futurista de moda</p>
+                </div>
+                <div class="evento-card" onclick="mostrarEvento('evento2')">
+                    <img src="Recursos/portadas/evento2.jpg" alt="Evento 2">
+                    <h3>Evento 2</h3>
+                    <p>Próximamente</p>
+                </div>
+                <div class="evento-card" onclick="mostrarEvento('evento3')">
+                    <img src="Recursos/portadas/evento3.jpg" alt="Evento 3">
+                    <h3>Evento 3</h3>
+                    <p>Próximamente</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contenido del evento Venus Renait -->
+    <section id="venus-event" class="evento-contenido" style="display:none;">
+        <div class="contenedor">
+            <button class="btn-volver" onclick="ocultarEvento()">
+                <i class="fas fa-arrow-left"></i> Volver a eventos
+            </button>
+            
+            <h2>Venus Renait</h2>
+            <p class="evento-subtitulo">Pasarela futurista inspirada en la feminidad cósmica</p>
+            
+            <!-- 1. Plan estratégico de gestión de eventos -->
+            <div class="evento-seccion">
+                <h3>1. Plan estratégico de gestión de eventos</h3>
+                
+                <!-- Brief -->
+                <div class="evento-subseccion">
+                    <h4>Brief</h4>
+                    <div class="brief-images">
+                        <img src="Recursos/venus/venus1.jpg" alt="Brief Venus Renait 1">
+                        <img src="Recursos/venus/venus2.jpg" alt="Brief Venus Renait 2">
+                        <img src="Recursos/venus/venus3.jpg" alt="Brief Venus Renait 3">
+                    </div>
+                </div>
+                
+                <!-- Concepto de pasarela -->
+                <div class="evento-subseccion">
+                    <h4>Concepto de pasarela</h4>
+                    <div class="concepto-texto">
+                        <p>La pasarela <strong>Venus Tenait</strong> surge de una visión futurista en la que la Tierra ha dejado de ser habitable y las personas de alta gama migran a Venus para iniciar una nueva civilización. En este nuevo mundo, son las mujeres quienes gobiernan, rindiendo homenaje al poder, la belleza y la sabiduría femenina. Inspirada en la figura mítica de Afrodita, diosa del amor y la belleza, la colección captura la esencia de una sociedad renacida, donde la feminidad es símbolo de liderazgo, fortaleza y renovación.</p>
+                        <p>El moodboard refleja esta estética combinando imágenes de Venus como planeta, iconografía clásica de diosas, y elementos cósmicos que aluden al renacimiento de una nueva humanidad en un paisaje celestial.</p>
+                        <p>Los colores elegidos—tonos de atardecer como rosados, lilas, dorados, naranjas y tonos tierra—representan el tránsito entre el fin de un mundo y el inicio de otro. Estos matices evocan calidez, esperanza, poder espiritual y una atmósfera de ensueño. Cada color habla de evolución, belleza y resiliencia, encapsulando la esencia de <strong>Venus Renait</strong> como un nuevo amanecer para la humanidad, liderado por el poder femenino.</p>
+                    </div>
+                </div>
+                
+                <!-- Dosier - Patrocinadores -->
+                <div class="evento-subseccion">
+                    <h4>Dosier - Patrocinadores</h4>
+                    <div class="pdf-container">
+                        <canvas id="pdf-viewer" class="pdf-viewer"></canvas>
+                    </div>
+                    <div class="pdf-controls">
+                        <button id="prev-page"><i class="fas fa-arrow-left"></i> Anterior</button>
+                        <span id="page-num">Página 1 de 1</span>
+                        <button id="next-page">Siguiente <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contenedor de las burbujas flotantes -->
+    <div class="burbujas">
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+    </div>
+
+    <div class="clouds"></div>
+    <div class="rabbit"></div>
+
+    <script>
+        // Configuración de PDF.js
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js';
+        
+        let pdfDoc = null,
+            pageNum = 1,
+            pageRendering = false,
+            pageNumPending = null,
+            scale = 1.5;
+
+        // Función para renderizar una página del PDF
+        function renderPage(num) {
+            pageRendering = true;
+            pdfDoc.getPage(num).then(function(page) {
+                const viewport = page.getViewport({ scale: scale });
+                const canvas = document.getElementById('pdf-viewer');
+                const ctx = canvas.getContext('2d');
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
+
+                const renderContext = {
+                    canvasContext: ctx,
+                    viewport: viewport
+                };
+
+                const renderTask = page.render(renderContext);
+                renderTask.promise.then(function() {
+                    pageRendering = false;
+                    if (pageNumPending !== null) {
+                        renderPage(pageNumPending);
+                        pageNumPending = null;
+                    }
+                });
+            });
+
+            document.getElementById('page-num').textContent = 'Página ' + num + ' de ' + pdfDoc.numPages;
+        }
+
+        // Función para navegar entre páginas
+        function queueRenderPage(num) {
+            if (pageRendering) {
+                pageNumPending = num;
+            } else {
+                renderPage(num);
+            }
+        }
+
+        // Botones anterior/siguiente
+        document.getElementById('prev-page').addEventListener('click', function() {
+            if (pageNum <= 1) return;
+            pageNum--;
+            queueRenderPage(pageNum);
+        });
+
+        document.getElementById('next-page').addEventListener('click', function() {
+            if (pageNum >= pdfDoc.numPages) return;
+            pageNum++;
+            queueRenderPage(pageNum);
+        });
+
+        // Cargar el PDF
+        function loadPdf(url) {
+            pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+                pdfDoc = pdfDoc_;
+                document.getElementById('page-num').textContent = 'Página 1 de ' + pdfDoc.numPages;
+                renderPage(1);
+            });
+        }
+
+        // Mostrar/ocultar eventos
+        function mostrarEvento(evento) {
+            document.querySelector('.selector-eventos').style.display = 'none';
+            document.getElementById(evento + '-event').style.display = 'block';
+            
+            if (evento === 'venus') {
+                loadPdf('Recursos/patrocinadores.pdf');
+            }
+        }
+
+        function ocultarEvento() {
+            document.querySelector('.selector-eventos').style.display = 'block';
+            document.querySelectorAll('.evento-contenido').forEach(sec => {
+                sec.style.display = 'none';
+            });
+        }
+
+        // Menú móvil
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navbarMenu = document.querySelector('.navbar-menu');
+
+        mobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            navbarMenu.classList.toggle('active');
+        });
+
+        // Cerrar menú al hacer clic en un enlace
+        const navbarLinks = document.querySelectorAll('.navbar-link');
+        navbarLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                navbarMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
