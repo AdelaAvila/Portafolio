@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Online - Adela Ávila Franco</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Recursos/conejo.png" type="image/png">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <div class="rabbit"></div>
+            </div>
+            <div class="navbar-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar-menu">
+                <li class="navbar-item">
+                    <a href="index.html" class="navbar-link">Perfil</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="trabajo.html" class="navbar-link">Mi Trabajo</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="evento.html" class="navbar-link">Organización de Eventos</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="tienda.html" class="navbar-link active">Tienda Online</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <div class="logo">
+            <img src="Recursos/logo.png" alt="Logotipo de Adela Ávila Franco">
+        </div>
+        <div class="header-text">
+            <h1>Tienda Online</h1>
+            <h2>Diseños Exclusivos de Adela Ávila Franco</h2>
+        </div>
+    </header>
+
+    <!-- Sección principal de la tienda -->
+    <section class="tienda-principal">
+        <div class="contenedor">
+            <h2>Descubre Nuestras Colecciones</h2>
+            <p class="intro-tienda">Cada pieza en nuestra tienda es una obra de arte única, creada con pasión y atención
+                al detalle.
+                Explora nuestras colecciones inspiradas en lo místico y lo elegante, diseñadas para quienes buscan
+                algo más que moda: una expresión de identidad.</p>
+
+            <!-- Temporadas -->
+            <div class="seccion-tienda">
+                <h3>Temporadas</h3>
+                <div class="temporadas-grid">
+                    <div class="temporada">
+                        <img src="Recursos/temporadas/invierno.jpg" alt="Colección Otoño-Invierno">
+                        <h4>Otoño-Invierno 2025</h4>
+                        <p>Tonos cálidos y texturas acogedoras para las estaciones frías.</p>
+                    </div>
+                    <div class="temporada">
+                        <img src="Recursos/temporadas/primavera.jpg" alt="Colección Primavera-Verano">
+                        <h4>Primavera-Verano 2024</h4>
+                        <p>Diseños frescos y fluidos inspirados en la renovación espiritual.</p>
+                    </div>
+                    <div class="temporada">
+                        <img src="Recursos/temporadas/verano.jpg" alt="Colección Especial">
+                        <h4>Edición Esotérica</h4>
+                        <p>Piezas únicas con simbolismos místicos y energéticos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categorías -->
+            <div class="seccion-tienda">
+                <h3>Categorías</h3>
+                <div class="categorias-grid">
+                    <div class="categoria">
+                        <i class="fas fa-tshirt"></i>
+                        <h4>Ropa</h4>
+                        <p>Vestidos, blusas, faldas y más con diseños únicos.</p>
+                    </div>
+                    <div class="categoria">
+                        <i class="fas fa-ring"></i>
+                        <h4>Accesorios</h4>
+                        <p>Bisutería artesanal que complementa tu estilo.</p>
+                    </div>
+                    <div class="categoria">
+                        <i class="fas fa-paw"></i>
+                        <h4>Para Mascotas</h4>
+                        <p>Ropa y accesorios para tus compañeros espirituales.</p>
+                    </div>
+                    <div class="categoria">
+                        <i class="fas fa-baby"></i>
+                        <h4>Para Bebés</h4>
+                        <p>Diseños suaves y mágicos para los más pequeños.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Colaboraciones -->
+            <div class="seccion-tienda colaboraciones">
+                <h3>Colaboraciones Especiales</h3>
+                <div class="colaboracion">
+                    <img src="Recursos/temporadas/luna.jpg" alt="Colaboración con Artista">
+                    <div class="colaboracion-info">
+                        <h4>Colección "Energía Lunar"</h4>
+                        <p>En colaboración con la artista visual Luna Martínez, presentamos esta colección
+                            que fusiona el diseño de modas con arte energético. Cada pieza está impregnada
+                            con símbolos lunares y está diseñada para armonizar con los ciclos naturales.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carrito de compras -->
+            <div class="carrito-flotante">
+                <a href="#" class="btn-carrito">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="contador-carrito">0</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de proceso de compra -->
+    <section class="proceso-compra">
+        <div class="contenedor">
+            <h2>¿Cómo Comprar?</h2>
+            <div class="pasos-compra">
+                <div class="paso">
+                    <div class="numero">1</div>
+                    <h4>Explora</h4>
+                    <p>Navega por nuestras colecciones y encuentra piezas que resuenen contigo.</p>
+                </div>
+                <div class="paso">
+                    <div class="numero">2</div>
+                    <h4>Selecciona</h4>
+                    <p>Elige tus artículos favoritos y añádelos al carrito.</p>
+                </div>
+                <div class="paso">
+                    <div class="numero">3</div>
+                    <h4>Personaliza</h4>
+                    <p>Algunas piezas pueden personalizarse según tus preferencias.</p>
+                </div>
+                <div class="paso">
+                    <div class="numero">4</div>
+                    <h4>Finaliza</h4>
+                    <p>Completa el proceso de pago seguro y recibe tu pedido.</p>
+                </div>
+            </div>
+            <div class="tienda-externa">
+                <p>También puedes visitar nuestra tienda en línea externa para ver el catálogo completo:</p>
+                <a href="https://uziel007.github.io/TiendaOnline/" target="_blank" class="btn-tienda-externa">
+                    Visitar Tienda Completa
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de contacto -->
+    <section class="contacto">
+        <div class="contenedor">
+            <h2>¿Necesitas ayuda con tu compra?</h2>
+            <p>Contáctanos para cualquier consulta sobre tallas, personalizaciones o pedidos especiales.</p>
+
+            <div class="redes-sociales">
+                <a href="https://wa.me/5524218886" target="_blank"><img src="Recursos/whats.png" alt="WhatsApp"></a>
+                <a href="https://www.instagram.com/adelaavila333?igsh=cDkxcDRoMW56b3Zw" target="_blank"><img
+                        src="Recursos/instagram.png" alt="Instagram"></a>
+                <a href="https://www.tiktok.com/@adelaavila333?_t=ZM-8v1HPR7B7Ys&_r=1" target="_blank"><img
+                        src="Recursos/tiktok.png" alt="TikTok"></a>
+                <a href="https://www.youtube.com/@adelaavila333" target="_blank"><img src="Recursos/youtube.png"
+                        alt="YouTube"></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contenedor de las burbujas flotantes -->
+    <div class="burbujas">
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+    </div>
+
+    <div class="clouds"></div>
+    <div class="rabbit"></div>
+
+    <script>
+        // Menú móvil
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navbarMenu = document.querySelector('.navbar-menu');
+
+        mobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            navbarMenu.classList.toggle('active');
+        });
+
+        // Cerrar menú al hacer clic en un enlace
+        const navbarLinks = document.querySelectorAll('.navbar-link');
+        navbarLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                navbarMenu.classList.remove('active');
+            });
+        });
+
+        // Simulación de carrito (puedes implementar la funcionalidad real más adelante)
+        const btnCarrito = document.querySelector('.btn-carrito');
+        btnCarrito.addEventListener('click', (e) => {
+            e.preventDefault();
+            alert('Carrito de compras - Funcionalidad en desarrollo');
+        });
+    </script>
+</body>
+
+</html>

@@ -1,13 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio - Adela Ávila Franco</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="Recursos/conejo.png" type="image/png">
+    <!-- Font Awesome para el icono del menú móvil -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <div class="rabbit"></div>
+            </div>
+            <div class="navbar-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar-menu">
+                <li class="navbar-item">
+                    <a href="index.html" class="navbar-link active">Perfil</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="trabajo.html" class="navbar-link">Mi Trabajo</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="evento.html" class="navbar-link">Organizacion De Eventos</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="tienda.html" class="navbar-link">Tienda Online</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <header>
         <div class="logo">
             <img src="Recursos/logo.png" alt="Logotipo de Adela Ávila Franco">
@@ -16,7 +46,7 @@
             <h1>Adela Ávila Franco</h1>
             <h2>Confección y Diseño Digital</h2>
         </div>
-    </header>    
+    </header>
 
     <section class="sobre-mi">
         <div class="contenedor">
@@ -24,79 +54,87 @@
             <div class="contenido">
                 <img src="Recursos/foto.jpeg" alt="Foto de Adela Ávila Franco">
                 <p>
-                    Soy Adela Ávila Franco, diseñadora de modas con un enfoque en la confección y el diseño digital.  
-                    Mi trabajo fusiona lo artesanal con lo místico, creando piezas únicas que reflejan  
-                    la espiritualidad y la elegancia de lo esotérico. Cada diseño es una expresión de  
-                    autenticidad y conexión emocional, pensado para quienes buscan algo más que moda:  
+                    Soy Adela Ávila Franco, diseñadora de modas con un enfoque en la confección y el diseño digital.
+                    Mi trabajo fusiona lo artesanal con lo místico, creando piezas únicas que reflejan
+                    la espiritualidad y la elegancia de lo esotérico. Cada diseño es una expresión de
+                    autenticidad y conexión emocional, pensado para quienes buscan algo más que moda:
                     una experiencia única.
                 </p>
             </div>
         </div>
-    </section>    
+    </section>
 
     <section class="identidad-visual">
         <div class="contenedor">
             <h2>Identidad Visual</h2>
-    
+
             <!-- Logotipo -->
             <div class="logo-seccion">
                 <h3>Logotipo</h3>
-                <p>El logotipo representa la esencia mística y sofisticada de la marca. Su diseño refleja la conexión con lo esotérico y la autenticidad en cada creación.</p>
-                
+                <p>El logotipo representa la esencia mística y sofisticada de la marca. Su diseño refleja la conexión
+                    con lo esotérico y la autenticidad en cada creación.</p>
+
                 <figure>
                     <img src="Recursos/logo.png" alt="Logotipo Principal">
                     <figcaption>Logotipo Principal</figcaption>
                 </figure>
-                
+
                 <figure>
                     <img src="Recursos/logoVariante.jpeg" alt="Variación del Logotipo">
                     <figcaption>Variación del Logotipo</figcaption>
                 </figure>
             </div>
-    
+
             <!-- Paleta de Colores -->
             <div class="paleta-colores">
                 <h3>Paleta de Colores</h3>
-                <p>Cada color fue seleccionado cuidadosamente para representar la pureza, la elegancia y la magia. Esta combinación transmite la esencia única de la marca.</p>
+                <p>Cada color fue seleccionado cuidadosamente para representar la pureza, la elegancia y la magia. Esta
+                    combinación transmite la esencia única de la marca.</p>
                 <div class="colores">
                     <div class="color" style="background-color: #A389D8;">#A389D8 <br> Místico y espiritual</div>
                     <div class="color" style="background-color: #000000;">#000000 <br> Elegante y sofisticado</div>
-                    <div class="color" style="background-color: #FFFFFF; color: black;">#FFFFFF <br> Pureza y equilibrio</div>
+                    <div class="color" style="background-color: #FFFFFF; color: black;">#FFFFFF <br> Pureza y equilibrio
+                    </div>
                     <div class="color" style="background-color: #b78e81;">#b78e81 <br> Calidez y suavidad</div>
                 </div>
-            </div>            
-    
+            </div>
+
             <!-- Tipografía -->
             <div class="tipografia">
                 <h3>Tipografía</h3>
                 <p class="fuente-ejemplo" style="justify-content: center;">Celtic Garamond</p>
-                <p>La tipografía <strong>Celtic Garamond</strong> aporta un toque mágico y antiguo, manteniendo claridad en la lectura. Es perfecta para comunicar autenticidad y conexión emocional.</p>
+                <p>La tipografía <strong>Celtic Garamond</strong> aporta un toque mágico y antiguo, manteniendo claridad
+                    en la lectura. Es perfecta para comunicar autenticidad y conexión emocional.</p>
             </div>
         </div>
     </section>
-    
+
     <section class="tono-marca">
         <div class="contenedor">
             <h2>Tono de la Marca</h2>
-            <p>El tono de la marca es elegante y místico, pero accesible. Busca atraer a personas que valoran lo esotérico y desean conectarse con una experiencia emocional única a través de los productos.</p>
-            
+            <p>El tono de la marca es elegante y místico, pero accesible. Busca atraer a personas que valoran lo
+                esotérico y desean conectarse con una experiencia emocional única a través de los productos.</p>
+
             <div class="tarjetas-tono">
                 <div class="tarjeta">
                     <img src="Recursos/magia.jpeg" alt="Misterio y Magia">
                     <h3>Misterio y Magia</h3>
-                    <p>El enfoque esotérico de la marca transmite una sensación de magia y espiritualidad, creando una conexión única con cada cliente.</p>
+                    <p>El enfoque esotérico de la marca transmite una sensación de magia y espiritualidad, creando una
+                        conexión única con cada cliente.</p>
                 </div>
-    
+
                 <div class="tarjeta">
                     <img src="Recursos/elegancia.jpeg" alt="Elegancia y Sofisticación">
                     <h3>Elegancia y Sofisticación</h3>
-                    <p>Los diseños reflejan la elegancia de lo antiguo con un toque moderno, logrando un equilibrio entre lo artesanal y lo contemporáneo.</p>
+                    <p>Los diseños reflejan la elegancia de lo antiguo con un toque moderno, logrando un equilibrio
+                        entre lo artesanal y lo contemporáneo.</p>
                 </div>
-    
+
                 <div class="tarjeta">
                     <img src="Recursos/conexion.jpeg" alt="Conexión Emocional">
                     <h3>Conexión Emocional</h3>
-                    <p>Cada pieza cuenta una historia y busca generar una conexión emocional profunda, alineada con la filosofía de la marca.</p>
+                    <p>Cada pieza cuenta una historia y busca generar una conexión emocional profunda, alineada con la
+                        filosofía de la marca.</p>
                 </div>
             </div>
         </div>
@@ -105,201 +143,108 @@
     <section class="normativas">
         <div class="contenedor">
             <h2>Normativas de Diseño</h2>
-            <p>Para mantener la coherencia visual y filosófica de la marca, se deben seguir las siguientes normativas en todos los materiales gráficos y digitales.</p>
-    
+            <p>Para mantener la coherencia visual y filosófica de la marca, se deben seguir las siguientes normativas en
+                todos los materiales gráficos y digitales.</p>
+
             <ul class="lista-normativas">
-                <li><strong>Colores:</strong> El logotipo debe respetar la paleta de colores seleccionada. No se permite el uso de colores adicionales que cambien la identidad visual.</li>
-                <li><strong>Tipografía:</strong> La tipografía principal de la marca, <strong>Celtic Garamond</strong>, debe usarse en todos los materiales gráficos y digitales. Fuentes complementarias podrán usarse solo para subtítulos o textos secundarios.</li>
-                <li><strong>Diseño de Productos:</strong> Todos los productos creados bajo esta marca deben alinearse con la filosofía esotérica y mágica, evitando diseños que no representen los valores o esencia de la marca.</li>
+                <li><strong>Colores:</strong> El logotipo debe respetar la paleta de colores seleccionada. No se permite
+                    el uso de colores adicionales que cambien la identidad visual.</li>
+                <li><strong>Tipografía:</strong> La tipografía principal de la marca, <strong>Celtic Garamond</strong>,
+                    debe usarse en todos los materiales gráficos y digitales. Fuentes complementarias podrán usarse solo
+                    para subtítulos o textos secundarios.</li>
+                <li><strong>Diseño de Productos:</strong> Todos los productos creados bajo esta marca deben alinearse
+                    con la filosofía esotérica y mágica, evitando diseños que no representen los valores o esencia de la
+                    marca.</li>
             </ul>
         </div>
     </section>
 
     <!-- Sección Mi Inspiración -->
-<section class="mi-inspiracion">
-    <div class="contenedor">
-        <h2>Mi Inspiración</h2>
-        <p>La inspiración detrás de mi trabajo proviene de diversas fuentes, desde la conexión con la espiritualidad hasta las emociones profundas que transmiten mis diseños. Este GIF representa un poco de la magia que impulsa mi proceso creativo.</p>
-        <img src="Recursos/gustos.gif" alt="Mi inspiración en diseño" class="inspiracion-gif">
-    </div>
-</section>
-
-<section class="carrusel">
-    <div class="carrusel-texto">
-        <h2>Mi Trabajo</h2>
-        <p>Cada diseño refleja mi pasión por la moda y el arte hecho a mano. He creado desde vestidos de gala hasta muñecos tejidos, bisutería, peluches y bordados. También diseño ropa para bebés, mascotas y accesorios únicos, fusionando creatividad y estilo en cada pieza.</p>
-    </div>
-    
-    <div class="contenedor-carrusel">
-        <div class="carrusel-imagenes">
-            <img src="Recursos/vestidos/1.jpg" class="activa">
-            <img src="Recursos/vestidos/2.jpg">
-            <img src="Recursos/vestidos/3.jpg">
-            <img src="Recursos/vestidos/4.jpg">
-            <img src="Recursos/vestidos/7.jpg">
-            <img src="Recursos/vestidos/8.jpg">
-            <img src="Recursos/vestidos/9.jpg">
-            <img src="Recursos/vestidos/10.jpg">
-            <img src="Recursos/vestidos/11.jpg">
-            <img src="Recursos/vestidos/12.jpg">
-            <img src="Recursos/vestidos/13.jpg">
-            <img src="Recursos/vestidos/14.jpg">
-            <img src="Recursos/vestidos/15.jpg">
-            <img src="Recursos/vestidos/16.jpg">
-            <img src="Recursos/vestidos/17.jpg">
-            <img src="Recursos/vestidos/18.jpg">
-            <img src="Recursos/vestidos/19.jpg">
-            <img src="Recursos/vestidos/20.jpg">
-            <img src="Recursos/vestidos/21.jpg">
-            <img src="Recursos/vestidos/22.jpg">
-            <img src="Recursos/vestidos/23.jpg">
-            <img src="Recursos/vestidos/24.jpg">
-            <img src="Recursos/vestidos/25.jpg">
-            <img src="Recursos/vestidos/26.jpg">
-            <img src="Recursos/vestidos/27.jpg">
-            <img src="Recursos/vestidos/28.jpg">
-            <img src="Recursos/vestidos/29.jpg">
-            <img src="Recursos/vestidos/30.jpg">
-            <img src="Recursos/vestidos/31.jpg">
-            <img src="Recursos/vestidos/32.jpg">
-            <img src="Recursos/vestidos/33.jpg">
-            <img src="Recursos/vestidos/34.jpg">
-            <img src="Recursos/vestidos/35.jpg">
-            <img src="Recursos/vestidos/36.jpg">
-            <img src="Recursos/vestidos/37.jpg">
+    <section class="mi-inspiracion">
+        <div class="contenedor">
+            <h2>Mi Inspiración</h2>
+            <p>La inspiración detrás de mi trabajo proviene de diversas fuentes, desde la conexión con la espiritualidad
+                hasta las emociones profundas que transmiten mis diseños. Este GIF representa un poco de la magia que
+                impulsa mi proceso creativo.</p>
+            <img src="Recursos/gustos.gif" alt="Mi inspiración en diseño" class="inspiracion-gif">
         </div>
-    </div>
-    
-    <div class="indicadores">
-        <span class="dot" onclick="irAImagen(0)"></span>
-        <span class="dot" onclick="irAImagen(1)"></span>
-        <span class="dot" onclick="irAImagen(2)"></span>
-        <span class="dot" onclick="irAImagen(3)"></span>
-        <span class="dot" onclick="irAImagen(4)"></span>
-        <span class="dot" onclick="irAImagen(5)"></span>
-        <span class="dot" onclick="irAImagen(6)"></span>
-        <span class="dot" onclick="irAImagen(7)"></span>
-        <span class="dot" onclick="irAImagen(8)"></span>
-        <span class="dot" onclick="irAImagen(9)"></span>
-        <span class="dot" onclick="irAImagen(10)"></span>
-        <span class="dot" onclick="irAImagen(11)"></span>
-        <span class="dot" onclick="irAImagen(12)"></span>
-        <span class="dot" onclick="irAImagen(13)"></span>
-        <span class="dot" onclick="irAImagen(14)"></span>
-        <span class="dot" onclick="irAImagen(15)"></span>
-        <span class="dot" onclick="irAImagen(16)"></span>
-        <span class="dot" onclick="irAImagen(17)"></span>
-        <span class="dot" onclick="irAImagen(18)"></span>
-        <span class="dot" onclick="irAImagen(19)"></span>
-        <span class="dot" onclick="irAImagen(20)"></span>
-        <span class="dot" onclick="irAImagen(21)"></span>
-        <span class="dot" onclick="irAImagen(22)"></span>
-        <span class="dot" onclick="irAImagen(23)"></span>
-        <span class="dot" onclick="irAImagen(24)"></span>
-        <span class="dot" onclick="irAImagen(25)"></span>
-        <span class="dot" onclick="irAImagen(26)"></span>
-        <span class="dot" onclick="irAImagen(27)"></span>
-        <span class="dot" onclick="irAImagen(28)"></span>
-        <span class="dot" onclick="irAImagen(29)"></span>
-        <span class="dot" onclick="irAImagen(30)"></span>
-        <span class="dot" onclick="irAImagen(31)"></span>
-        <span class="dot" onclick="irAImagen(32)"></span>
-        <span class="dot" onclick="irAImagen(33)"></span>
-        <span class="dot" onclick="irAImagen(34)"></span>
+    </section>
 
-    </div>
-</section>
+    <!-- Sección Redes Sociales e Información de Contacto -->
+    <section class="contacto">
+        <div class="contenedor">
+            <h2>Redes Sociales e Información de Contacto</h2>
+            <p>Puedes seguirme en mis redes sociales y contactarme para cualquier consulta o colaboración:</p>
 
-
-
-<!-- Sección Redes Sociales e Información de Contacto -->
-<section class="contacto">
-    <div class="contenedor">
-        <h2>Redes Sociales e Información de Contacto</h2>
-        <p>Puedes seguirme en mis redes sociales y contactarme para cualquier consulta o colaboración:</p>
-
-        <div class="redes-sociales">
-            <a href="https://wa.me/5524218886" target="_blank"><img src="Recursos/whats.png" alt="WhatsApp"></a>
-            <a href="https://www.instagram.com/adelaavila333?igsh=cDkxcDRoMW56b3Zw" target="_blank"><img src="Recursos/instagram.png" alt="Instagram"></a>
-            <a href="https://www.tiktok.com/@adelaavila333?_t=ZM-8v1HPR7B7Ys&_r=1" target="_blank"><img src="Recursos/tiktok.png" alt="TikTok"></a>
-            <a href="https://www.youtube.com/@adelaavila333" target="_blank"><img src="Recursos/youtube.png" alt="YouTube"></a>
+            <div class="redes-sociales">
+                <a href="https://wa.me/5524218886" target="_blank"><img src="Recursos/whats.png" alt="WhatsApp"></a>
+                <a href="https://www.instagram.com/adelaavila333?igsh=cDkxcDRoMW56b3Zw" target="_blank"><img
+                        src="Recursos/instagram.png" alt="Instagram"></a>
+                <a href="https://www.tiktok.com/@adelaavila333?_t=ZM-8v1HPR7B7Ys&_r=1" target="_blank"><img
+                        src="Recursos/tiktok.png" alt="TikTok"></a>
+                <a href="https://www.youtube.com/@adelaavila333" target="_blank"><img src="Recursos/youtube.png"
+                        alt="YouTube"></a>
+            </div>
         </div>
+    </section>
 
-        <p>Si te gustó mi trabajo, puedes visitar mi <a href="https://uziel007.github.io/TiendaOnline/" target="_blank" class="tienda-enlace">tienda online</a> para ver más productos y diseños exclusivos.</p>        
+    <!-- Contenedor de las burbujas flotantes -->
+    <div class="burbujas">
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
     </div>
-</section>
 
-<!-- Contenedor de las burbujas flotantes -->
-<div class="burbujas">
-    <div class="burbuja"></div>
-    <div class="burbuja"></div>
-    <div class="burbuja"></div>
-    <div class="burbuja"></div>
-    <div class="burbuja"></div>
-    <div class="burbuja"></div>
-    <div class="burbuja"></div>
-    <div class="burbuja"></div>
-    <div class="burbuja"></div>
-    <div class="burbuja"></div>
-    <div class="burbuja"></div>
-    <div class="burbuja"></div>
-    <div class="burbuja"></div>
-    <div class="burbuja"></div>
-    <div class="burbuja"></div>
-    <div class="burbuja"></div>
-    <div class="burbuja"></div>
-    <div class="burbuja"></div>
-    <div class="burbuja"></div>
-    <div class="burbuja"></div>
-    <div class="burbuja"></div>
-    <div class="burbuja"></div>
-    <div class="burbuja"></div>
-    <div class="burbuja"></div>
-    <div class="burbuja"></div>
-    <div class="burbuja"></div>
-    <div class="burbuja"></div>
-    <div class="burbuja"></div>
-    <div class="burbuja"></div>
-    <div class="burbuja"></div>
-    <div class="burbuja"></div>
-    <div class="burbuja"></div>
+    <div class="clouds"></div>
+    <div class="rabbit"></div>
+    <script>
+        // Menú móvil
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navbarMenu = document.querySelector('.navbar-menu');
 
-</div>
+        mobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            navbarMenu.classList.toggle('active');
+        });
 
-<div class="clouds"></div>
-<div class="rabbit"></div>
-<script>
-    let indice = 0;
-const imagenes = document.querySelectorAll('.carrusel-imagenes img');
-const dots = document.querySelectorAll('.dot');
-
-function mostrarImagen(n) {
-    imagenes.forEach(img => img.classList.remove('activa'));
-    dots.forEach(dot => dot.classList.remove('activo'));
-    
-    if (n >= imagenes.length) indice = 0;
-    if (n < 0) indice = imagenes.length - 1;
-
-    imagenes[indice].classList.add('activa');
-    dots[indice].classList.add('activo');
-}
-
-function cambiarImagen(n) {
-    indice += n;
-    mostrarImagen(indice);
-}
-
-function irAImagen(n) {
-    indice = n;
-    mostrarImagen(indice);
-}
-
-setInterval(() => {
-    cambiarImagen(1);
-}, 4000); // Cambia cada 4 segundos automáticamente
-
-mostrarImagen(indice);
-
-</script>
+        // Cerrar menú al hacer clic en un enlace
+        const navbarLinks = document.querySelectorAll('.navbar-link');
+        navbarLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                navbarMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
+
 </html>
