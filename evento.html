@@ -412,7 +412,7 @@
                     <img id="album-art" src="Recursos/album/1.png" alt="Album Art"
                         style="width: 300px; height: 300px; object-fit: cover; border-radius: 20px;">
                     <h5 id="current-track">Selecciona una canción</h5>
-                    <div id="video-player" style="margin-top: 20px;">
+                    <div id="video-player" class="video-container">
                         <!-- Aquí se cargará el video -->
                     </div>
                 </div>
@@ -981,6 +981,9 @@
             const currentTrack = document.getElementById("current-track");
             const videoPlayer = document.getElementById("video-player");
 
+            // Añadir la clase video-container al contenedor del video
+            videoPlayer.classList.add('video-container');
+
             trackList.addEventListener("click", function (e) {
                 if (e.target.tagName === "LI") {
                     // Eliminar la clase 'selected' de todos los elementos
@@ -997,11 +1000,17 @@
 
                     albumArt.src = `Recursos/album/${imgSrc}`;
                     currentTrack.textContent = title;
-                    videoPlayer.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${videoId}?autoplay=1" 
-                                      frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+
+                    // Código modificado para el reproductor responsivo
+                    videoPlayer.innerHTML = `
+                <iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1&enablejsapi=1" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen></iframe>`;
                 }
             });
         });
+
         // Función para cambiar entre pestañas de fotos y videos
         function openRegistroTab(tabName) {
             const tabs = document.querySelectorAll('.registro-tab');
