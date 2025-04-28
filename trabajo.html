@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Trabajo - Adela Ávila Franco</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Recursos/conejo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Sección Moodboard con Carrusel Vertical */
+        .moodboard {
+            padding: 50px 0;
+            position: relative;
+        }
+
+        .intro-text {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .vertical-carousel-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            height: 600px; /* Más alto para imágenes verticales */
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .vertical-carousel {
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.5s ease;
+        }
+
+        .vertical-carousel-slide {
+            width: 100%;
+            flex: 0 0 auto;
+            height: 600px; /* Igual que el contenedor */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #FFFFFF;
+        }
+
+        .vertical-carousel-slide img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .vertical-carousel-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: #FFFFFF;
+            padding: 15px;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        .vertical-carousel-prev,
+        .vertical-carousel-next {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(106, 48, 147, 0.7);
+            color: white;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            z-index: 10;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .vertical-carousel-prev:hover,
+        .vertical-carousel-next:hover {
+            background: rgba(106, 48, 147, 0.9);
+        }
+
+        .vertical-carousel-prev {
+            top: 20px;
+        }
+
+        .vertical-carousel-next {
+            bottom: 20px;
+        }
+
+        .vertical-carousel-indicadores {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 10px;
+        }
+
+        .vertical-indicador {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #e2b29f;
+            cursor: pointer;
+            opacity: 0.5;
+            transition: all 0.3s;
+        }
+
+        .vertical-indicador.active {
+            opacity: 1;
+            background-color: #A389D8;
+            transform: scale(1.2);
+        }
+
+        /* Sección Mi Trabajo */
+        .mi-trabajo {
+            padding: 50px 0;
+            background-color: rgba(163, 137, 216, 0.05);
+        }
+
+        .filtro-categorias {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .filtro-categorias select {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: 2px solid #A389D8;
+            border-radius: 25px;
+            background-color: #FFFFFF;
+            color: #000000;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        .filtro-categorias select:hover {
+            background-color: #A389D8;
+            color: #FFFFFF;
+        }
+
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .galeria-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .galeria-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .galeria-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s;
+        }
+
+        .galeria-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .galeria-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: #FFFFFF;
+            padding: 15px;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+
+        .galeria-item:hover .galeria-info {
+            transform: translateY(0);
+        }
+
+        .galeria-info h3 {
+            margin: 0 0 5px 0;
+            color: #A389D8;
+        }
+
+        .galeria-info p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        /* Burbujas flotantes */
+        .burbujas {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .burbuja {
+            position: absolute;
+            bottom: -100px;
+            background: rgba(163, 137, 216, 0.2);
+            border-radius: 50%;
+            animation: burbujas 15s linear infinite;
+        }
+
+        @keyframes burbujas {
+            0% {
+                bottom: -100px;
+                transform: translateX(0);
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.4;
+            }
+            100% {
+                bottom: 100%;
+                transform: translateX(200px);
+                opacity: 0;
+            }
+        }
+            .galeria {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+
+            .header-text h1 {
+                font-size: 2rem;
+            }
+
+            .header-text h2 {
+                font-size: 1.2rem;
+            }
+
+            .vertical-carousel-container {
+                max-width: 90%;
+                height: 500px;
+            }
+
+            .vertical-carousel-slide {
+                height: 500px;
+            }
+
+        @media (max-width: 480px) {
+            .galeria {
+                grid-template-columns: 1fr;
+            }
+
+            .vertical-carousel-container {
+                height: 400px;
+            }
+
+            .vertical-carousel-slide {
+                height: 400px;
+            }
+
+            .vertical-carousel-prev,
+            .vertical-carousel-next {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <div class="rabbit"></div>
+            </div>
+            <div class="navbar-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar-menu" id="navbar-menu">
+                <li class="navbar-item">
+                    <a href="index.html" class="navbar-link">Perfil</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="trabajo.html" class="navbar-link active">Mi Trabajo</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="evento.html" class="navbar-link">Organización De Eventos</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="tienda.html" class="navbar-link">Tienda Online</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <div class="logo">
+            <img src="Recursos/logo.png" alt="Logotipo de Adela Ávila Franco">
+        </div>
+        <div class="header-text">
+            <h1>Adela Ávila Franco</h1>
+            <h2>Mi Trabajo</h2>
+        </div>
+    </header>
+
+    <!-- Sección Moodboard con Carrusel Vertical -->
+    <section class="moodboard">
+        <div class="contenedor">
+            <h2>Moodboard</h2>
+            <p class="intro-text">
+                Este moodboard representa mi universo creativo, donde cada imagen es una fuente de inspiración
+                que alimenta mis diseños. Aquí encontrarás una colección cuidadosamente seleccionada de texturas,
+                colores y conceptos que definen la esencia mística y elegante de mi trabajo.
+            </p>
+            <div class="vertical-carousel-container">
+                <button class="vertical-carousel-prev">↑</button>
+                <button class="vertical-carousel-next">↓</button>
+                <div class="vertical-carousel" id="vertical-carousel">
+                    <div class="vertical-carousel-slide">
+                        <img src="Recursos/moodboard/moodboard1.jpg" alt="Inspiración primaveral">
+                        <div class="vertical-carousel-caption">Inspiración primaveral</div>
+                    </div>
+                    <div class="vertical-carousel-slide">
+                        <img src="Recursos/moodboard/moodboard2.jpg" alt="Texturas naturales">
+                        <div class="vertical-carousel-caption">Texturas naturales</div>
+                    </div>
+                    <div class="vertical-carousel-slide">
+                        <img src="Recursos/moodboard/moodboard3.jpg" alt="Paleta de colores mágicos">
+                        <div class="vertical-carousel-caption">Paleta de colores mágicos</div>
+                    </div>
+                    <div class="vertical-carousel-slide">
+                        <img src="Recursos/moodboard/moodboard4.jpg" alt="Elementos esotéricos">
+                        <div class="vertical-carousel-caption">Elementos esotéricos</div>
+                    </div>
+                    <div class="vertical-carousel-slide">
+                        <img src="Recursos/moodboard/moodboard5.jpg" alt="Detalles artesanales">
+                        <div class="vertical-carousel-caption">Detalles artesanales</div>
+                    </div>
+                    <div class="vertical-carousel-slide">
+                        <img src="Recursos/moodboard/moodboard6.jpg" alt="Fusión de tradición y modernidad">
+                        <div class="vertical-carousel-caption">Fusión de tradición y modernidad</div>
+                    </div>
+                    <div class="vertical-carousel-slide">
+                        <img src="Recursos/moodboard/moodboard7.jpg" alt="Influencias culturales">
+                        <div class="vertical-carousel-caption">Influencias culturales</div>
+                    </div>
+                    <div class="vertical-carousel-slide">
+                        <img src="Recursos/moodboard/moodboard8.jpg" alt="Armonía cromática">
+                        <div class="vertical-carousel-caption">Armonía cromática</div>
+                    </div>
+                    <div class="vertical-carousel-slide">
+                        <img src="Recursos/moodboard/moodboard9.jpg" alt="Siluetas inspiradoras">
+                        <div class="vertical-carousel-caption">Siluetas inspiradoras</div>
+                    </div>
+                    <div class="vertical-carousel-slide">
+                        <img src="Recursos/moodboard/moodboard10.jpg" alt="Texturas y patrones">
+                        <div class="vertical-carousel-caption">Texturas y patrones</div>
+                    </div>
+                    <div class="vertical-carousel-slide">
+                        <img src="Recursos/moodboard/moodboard11.jpg" alt="Esencia creativa">
+                        <div class="vertical-carousel-caption">Esencia creativa</div>
+                    </div>
+                </div>
+                <div class="vertical-carousel-indicadores" id="vertical-indicadores">
+                    <!-- Los indicadores se generarán con JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Mi Trabajo -->
+    <section class="mi-trabajo">
+        <div class="contenedor">
+            <h2>Mi Trabajo</h2>
+            <p class="intro-text">
+                Explora mi portfolio de diseños, donde cada pieza cuenta una historia única. Desde alta costura
+                hasta diseños para niños, cada creación lleva mi sello personal de elegancia mística. Selecciona
+                una categoría para descubrir la diversidad de mi trabajo y el cuidado artesanal en cada detalle.
+            </p>
+            <div class="filtro-categorias">
+                <select id="categoria-select">
+                    <option value="">Todas las categorías</option>
+                    <option value="bebe">Bebé</option>
+                    <option value="nino">Niño</option>
+                    <option value="adolecente">Adolescente</option>
+                    <option value="peluche">Peluche</option>
+                    <option value="estampados">Estampados</option>
+                    <option value="fichastecnicas">Fichas técnicas</option>
+                    <option value="maquillajedepuestaenescena">Maquillaje de puesta en escena</option>
+                    <option value="maqueta">Maqueta</option>
+                    <option value="mascota">Mascota</option>
+                    <option value="altacostura">Alta costura</option>
+                </select>
+            </div>
+            <div class="galeria" id="galeria">
+                <!-- Las imágenes se agregarán dinámicamente con JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Burbujas flotantes -->
+    <div class="burbujas" id="burbujas">
+        <!-- Las burbujas se agregarán dinámicamente con JavaScript -->
+    </div>
+
+    <!-- Conejo flotante -->
+    <div class="rabbit"></div>
+
+    <!-- Nubes -->
+    <div class="clouds"></div>
+
+    <script>
+        // Menú móvil
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navbarMenu = document.getElementById('navbar-menu');
+    
+        mobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            navbarMenu.classList.toggle('active');
+        });
+    
+        // Cerrar menú al hacer clic en un enlace
+        const navbarLinks = document.querySelectorAll('.navbar-link');
+        navbarLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                navbarMenu.classList.remove('active');
+            });
+        });
+    
+        // Generar burbujas
+        const burbujasContainer = document.getElementById('burbujas');
+        for (let i = 0; i < 30; i++) {
+            const burbuja = document.createElement('div');
+            burbuja.classList.add('burbuja');
+            
+            // Tamaño aleatorio entre 10px y 50px
+            const size = Math.random() * 40 + 10;
+            burbuja.style.width = `${size}px`;
+            burbuja.style.height = `${size}px`;
+            
+            // Posición inicial aleatoria
+            burbuja.style.left = `${Math.random() * 100}%`;
+            
+            // Animación con duración aleatoria
+            burbuja.style.animationDuration = `${Math.random() * 10 + 10}s`;
+            burbuja.style.animationDelay = `${Math.random() * 5}s`;
+            
+            burbujasContainer.appendChild(burbuja);
+        }
+    
+        // Carrusel Vertical de Moodboard
+        const carousel = document.querySelector('.vertical-carousel');
+        const slides = document.querySelectorAll('.vertical-carousel-slide');
+        const prevButton = document.querySelector('.vertical-carousel-prev');
+        const nextButton = document.querySelector('.vertical-carousel-next');
+        let currentIndex = 0;
+        const slideHeight = 600; // Igual al CSS
+    
+        function updateCarousel() {
+            carousel.style.transform = `translateY(-${currentIndex * slideHeight}px)`;
+        }
+    
+        nextButton.addEventListener('click', () => {
+            if (currentIndex < slides.length - 1) {
+                currentIndex++;
+            } else {
+                currentIndex = 0; // Reiniciar al principio si llega al final
+            }
+            updateCarousel();
+        });
+    
+        prevButton.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = slides.length - 1; // Ir al último si está en el primero
+            }
+            updateCarousel();
+        });
+    
+        // ---- AUTOPLAY cada 3 segundos ----
+        setInterval(() => {
+            nextButton.click(); // Simula un clic en el botón de "siguiente"
+        }, 3000);
+    
+        // Crear indicadores para el carrusel vertical
+        const verticalIndicadores = document.getElementById('vertical-indicadores'); // Asegúrate de tener este contenedor
+        function crearVerticalIndicadores() {
+            verticalIndicadores.innerHTML = '';
+            slides.forEach((slide, index) => {
+                const indicador = document.createElement('div');
+                indicador.className = 'vertical-indicador';
+                if (index === 0) indicador.classList.add('active');
+                indicador.addEventListener('click', () => {
+                    currentIndex = index;
+                    updateCarousel();
+                });
+                verticalIndicadores.appendChild(indicador);
+            });
+        }
+    
+        // Inicializar carrusel vertical
+        crearVerticalIndicadores();
+    
+        // Galería de trabajos por categoría
+        const galeria = document.getElementById('galeria');
+        const categoriaSelect = document.getElementById('categoria-select');
+        
+        // Objeto con las categorías y sus imágenes
+        const categorias = {
+            bebe: "Bebé",
+            nino: "Niño",
+            adolecente: "Adolescente",
+            peluche: "Peluche",
+            estampados: "Estampados",
+            fichastecnicas: "Fichas técnicas",
+            maquillajedepuestaenescena: "Maquillaje de puesta en escena",
+            maqueta: "Maqueta",
+            mascota: "Mascota",
+            altacostura: "Alta costura"
+        };
+        
+        // Función para cargar imágenes de una categoría
+        function cargarImagenes(categoria = '') {
+            galeria.innerHTML = '';
+            
+            if (!categoria) {
+                // Cargar todas las categorías
+                Object.keys(categorias).forEach(cat => {
+                    cargarImagenesCategoria(cat);
+                });
+            } else {
+                // Cargar solo la categoría seleccionada
+                cargarImagenesCategoria(categoria);
+            }
+        }
+        
+        // Función para cargar imágenes de una categoría específica
+        function cargarImagenesCategoria(categoria) {
+            let i = 1;
+            
+            // Verificamos hasta 50 imágenes por categoría
+            while (i <= 50) {
+                const imgPath = `Recursos/vestidos/${categoria}${i}.jpg`;
+                const img = new Image();
+                img.src = imgPath;
+                
+                img.onload = function() {
+                    const item = document.createElement('div');
+                    item.className = 'galeria-item';
+                    item.innerHTML = `
+                        <img src="${imgPath}" alt="${categorias[categoria]} ${i}">
+                        <div class="galeria-info">
+                            <h3>${categorias[categoria]}</h3>
+                        </div>
+                    `;
+                    galeria.appendChild(item);
+                };
+                
+                img.onerror = function() {
+                    // Si no hay más imágenes en esta categoría, no hacemos nada
+                };
+                
+                i++;
+            }
+        }
+        
+        // Evento para cambiar de categoría
+        categoriaSelect.addEventListener('change', (e) => {
+            cargarImagenes(e.target.value);
+        });
+        
+        // Cargar todas las imágenes al inicio
+        cargarImagenes();
+    </script>    
+</body>
+</html>
